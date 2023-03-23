@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#343541" />
+    <meta
+      name="description"
+      content="DaVinci the modern Personal AI Assistant."
+    />
+    <link rel="apple-touch-icon" type="image/svg+xml" href="assets/bot.svg" />
+    <link rel="manifest" href="manifest.json" />
     <title>DaVinci - Your Personal Assistant</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,5 +29,14 @@
       </form>
     </div>
     <script type="module" src="/script.js"></script>
+    <script>
+      if(ServiceWorker in navigator){
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('serviceWorker.js')
+          .then((reg) => console.log('Success:', reg.scope))
+          .catch((error) => console.log('Failure:', error));
+        })
+      }
+    </script>
   </body>
 </html>
