@@ -3,8 +3,8 @@
   "name": "DaVinci - Personal AI assistant",
   "icons": [
     {
-      "src": "assets/bot.svg",
-      "type": "image/svg",
+      "src": "assets/logo.png",
+      "type": "image/png",
       "sizes": "1024x1024"
     }
   ],
